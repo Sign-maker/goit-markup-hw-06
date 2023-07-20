@@ -80,7 +80,7 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 
-  outline: 1px dashed red;
+  /* outline: 1px dashed red; */
 }
 @media screen and (max-width: 1157px) {
   .container {
@@ -279,9 +279,9 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
-@media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi) {
+@media (orientation: landscape) and ((min-device-pixel-ratio: 2) or
+  (-webkit-min-device-pixel-ratio: 2) or
+  (min-resolution: 192dpi)) {
   .hero-section {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/people-office@2.jpg);
@@ -416,6 +416,9 @@ body {
     display: flex;
     gap: 24px;
   }
+  .product-list-item {
+    flex-basis: calc((100% - 48px) / 3);
+  }
   .product-list-item-img {
     border: 1px solid var(--accent);
   }
@@ -504,7 +507,7 @@ body {
   }
   .team-container {
     max-width: 584px;
-    outline: 1px dashed blue;
+    /* outline: 1px dashed blue; */
   }
 }
 @media screen and (max-width: 1157px) {
@@ -565,7 +568,7 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .custom-container {
     max-width: 584px;
-    outline: 1px dashed blue;
+    /* outline: 1px dashed blue; */
   }
   .customer-list-item {
     flex-basis: calc((100% - 48px) / 3);
@@ -807,7 +810,7 @@ body {
   .futer-container {
     flex-wrap: wrap;
     max-width: 584px;
-    outline: 1px dashed blue;
+    /* outline: 1px dashed blue; */
     column-gap: 24px;
   }
 }
@@ -827,14 +830,13 @@ body {
 }
 
 /* =============================BACKDROP================================= */
-
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
 .backdrop.is-hidden .modal {
-  transform: translateX(-50%) translateY(50%) scale(0);
+  transform: scale(0.2);
 }
 .backdrop {
   position: fixed;
@@ -849,13 +851,13 @@ body {
     visibility var(--my-transition-duration) var(--my-transition-timing-function);
 }
 .modal {
-  width: 408px;
+  width: 392px;
   min-height: 584px;
   background-color: var(--modal-background);
   position: absolute;
-  top: 50%;
+  top: 96px;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%) scale(1);
+  transform: translateX(-50%) scale(1);
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14);
@@ -863,6 +865,26 @@ body {
   padding: 72px 24px 24px 24px;
 }
 
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+}
+@media screen and (max-width: 1157px) {
+}
+
+@media screen and (min-width: 1158px) {
+  .modal {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+}
 /* ===============CLOSE_BUTTON============= */
 .modal-close-button {
   position: absolute;
