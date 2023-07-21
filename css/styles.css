@@ -280,7 +280,10 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
-@media (min-device-pixel-ratio: 2) or (-webkit-min-device-pixel-ratio: 2) or (min-resolution: 192dpi) {
+
+@media (-webkit-min-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-resolution: 192dpi) {
   .hero-section {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/people-office@2.jpg);
