@@ -74,12 +74,14 @@ body {
 }
 
 .container {
-  min-width: 320px;
-  margin: 0 auto;
+  /* width: 100%; */
+  min-width: 290px;
+  margin-left: auto;
+  margin-right: auto;
   /* outline: 1px dashed red; */
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 428px) {
   .container {
     max-width: 428px;
   }
@@ -92,13 +94,15 @@ body {
 }
 @media screen and (max-width: 1157px) {
   .container {
-    padding: 0 16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
