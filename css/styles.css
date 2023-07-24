@@ -622,6 +622,9 @@ body {
   .customer-list-item {
     flex-basis: calc((100% - 48px) / 3);
   }
+  .custom-container {
+    max-width: 584px;
+  }
 }
 @media screen and (max-width: 1157px) {
   .customer-list {
@@ -922,6 +925,7 @@ body {
   .futer-container {
     flex-wrap: wrap;
     column-gap: 24px;
+    max-width: 584px;
   }
 }
 @media screen and (max-width: 1157px) {
